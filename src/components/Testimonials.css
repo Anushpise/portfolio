@@ -1,0 +1,43 @@
+.testimonials-section {
+    padding: 4rem 5%;
+    background: var(--primary-blue);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials-title {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: black;
+    background: white;
+    display: inline-block;
+    padding: 1rem 3rem;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 250px;
+    height: 250px;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Polaroid style or just framed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #eee;
+}

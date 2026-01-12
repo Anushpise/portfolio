@@ -1,0 +1,47 @@
+.upcoming-section {
+    padding: 4rem 5%;
+    background: var(--primary-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Reuse similar table styles or define specific if needed. Keeping it consistent */
+.upcoming-table {
+    width: 100%;
+    max-width: 1000px;
+    border: 4px solid var(--secondary-purple);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 columns based on screenshot */
+    background: rgba(0, 0, 50, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.upcoming-header-row {
+    grid-column: 1 / -1;
+    background: #dcd0ff;
+    /* Light purple */
+    color: black;
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--secondary-purple);
+}
+
+.upcoming-cell {
+    padding: 1.5rem;
+    border: 1px solid var(--secondary-purple);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .upcoming-table {
+        grid-template-columns: 1fr;
+    }
+}

@@ -31,12 +31,11 @@ jobs:
           CI: false
 
       - name: Deploy to Jio Hosting via SFTP
-        uses: appleboy/scp-action@v0.1.7
+        uses: cross-the-world/scp-pipeline@master
         with:
           host: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          user: ${{ secrets.FTP_USERNAME }}
+          pass: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          source: "build/*"
-          target: "public_html/anjalipisecounsel.in/"
-          strip_components: 1
+          local: "build/*"
+          remote: "public_html/anjalipisecounsel.in/"

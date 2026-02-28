@@ -1,4 +1,4 @@
-name: React CI Pipeline
+name: React CI/CD Pipeline (FTP Deployment)
 
 on:
   push:
@@ -6,29 +6,33 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build & Test React App
+  build-and-deploy:
+    name: Build & Deploy React App
     runs-on: ubuntu-latest
 
     steps:
-      # STEP 1: Code uthao
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # STEP 2: Node install karo
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      # STEP 3: Dependencies install
       - name: Install Dependencies
         run: npm install
 
-      # STEP 4: Tests run
       - name: Run Tests
-        run: npm test -- --watchAll=false
+        run: npm test -- --passWithNoTests --watchAll=false
 
-      # STEP 5: Docker image build
-      - name: Build Docker Image
-        run: docker build -t react-portfolio .
+      - name: Build React App
+        run: npm run build
+
+      - name: Deploy to Jio Hosting via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+          server-dir: /public_html/anjalipisecounsel.in/

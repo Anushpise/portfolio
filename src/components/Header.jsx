@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { motion } from "framer-motion";
 import logo from "../img/logo.png.png";
+import cvPdf from "../pdf/Anjali_Pise_Resume.pdf";
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,18 +15,18 @@ const Header = () => {
             title: "Academics",
             link: "#academics",
             dropdown: [
-                {
-                    title: "Education Details",
-                    link: "#education",
-                    nested: [
-                        { title: "DCSE", link: "#dcse" },
-                        { title: "BTech (CSE)", link: "#btech" },
-                        { title: "MTech (CSE)", link: "#mtech" },
-                        { title: "ADCNMH (Pursuing)", link: "#adcnmh" }
-                    ]
-                },
-                { title: "CV", link: "#cv" },
-                { title: "Work Experience", link: "#experience" },
+                // {
+                //     title: "Education Details",
+                //     link: "#education",
+                //     nested: [
+                //         { title: "DCSE", link: "#dcse" },
+                //         { title: "BTech (CSE)", link: "#btech" },
+                //         { title: "MTech (CSE)", link: "#mtech" },
+                //         { title: "ADCNMH (Pursuing)", link: "#adcnmh" }
+                //     ]
+                // },
+                { title: "CV", link: cvPdf, target: "_blank" },
+                { title: "Work Experience", link: "/experience" },
                 { title: "--- Academics Subcontent ---", link: "#", isHeader: true },
                 {
                     title: "Research Interest Sector",
@@ -55,14 +56,14 @@ const Header = () => {
                         { title: "Book Author/Translator", link: "/publications/book-author" }
                     ]
                 },
-                { title: "NPTEL/Mooc", link: "#nptel" },
-                { title: "FDP's", link: "#fdp" },
-                { title: "Other Courses", link: "#other-courses" },
-                { title: "Presentation", link: "#presentation" },
+                { title: "NPTEL/Mooc", link: "/nptel" },
+                { title: "FDP's", link: "/fdp" },
+                { title: "Other Courses", link: "/other-courses" },
+                { title: "Presentation", link: "/presentation" },
                 { title: "Certifications", link: "/certifications" }
             ]
         },
-        { title: "AVMP Projects", link: "#projects" },
+        { title: "AVMP Projects", link: "/avmp-projects" },
         {
             title: "AVMP WORKING SECTOR",
             link: "#working-sector",
@@ -76,7 +77,7 @@ const Header = () => {
                 { title: "Browse Our Courses", link: "/services/browse-courses" }
             ]
         },
-        { title: "Media Gallery", link: "#media-gallery" }
+        { title: "Media Gallery", link: "/gallery" }
     ];
 
     return (
@@ -89,7 +90,6 @@ const Header = () => {
                     src={logo}
                     alt="logo"
                     className="zoom-img"
-                    style={{ width: "auto", height: "200px", margin: "-70px", }}
                     animate={{
                         scale: [1, 1.4, 1.4, 1],
                         rotate: [0, 0, 0, 0, 0],
@@ -120,7 +120,8 @@ const Header = () => {
                             <div className="dropdown-menu">
                                 {item.dropdown.map((subItem, subIndex) => (
                                     <div key={subIndex} className={`dropdown-item ${subItem.nested ? 'has-nested' : ''} ${subItem.isHeader ? 'menu-header' : ''}`}>
-                                        <a href={subItem.link}>{subItem.title}
+                                        <a href={subItem.link} target={subItem.target} rel={subItem.target === "_blank" ? "noopener noreferrer" : undefined}>
+                                            {subItem.title}
                                             {subItem.nested && <span className="arrow">▸</span>}
                                         </a>
 

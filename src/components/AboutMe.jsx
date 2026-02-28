@@ -1,9 +1,10 @@
 import React from 'react';
 import './AboutMe.css';
+import about from '../img/about.png';
 
 const AboutMe = () => {
     return (
-        <section className="aboutme-section">
+        <section className="aboutme-section" id="about">
             {/* White strip for title to match design aesthetic possibility */}
             <div style={{ background: 'white', width: '200px', textAlign: 'center', padding: '0.5rem', marginBottom: '2rem', clipPath: 'polygon(0 0, 100% 0, 85% 100%, 15% 100%)' }}>
                 <h2 style={{ color: 'black', margin: 0 }}>About me</h2>
@@ -12,7 +13,7 @@ const AboutMe = () => {
             <div className="aboutme-right-overlay"></div>
 
             <div className="aboutme-content">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Team" className="aboutme-image" />
+                <img src={about} alt="Team" className="aboutme-image" />
             </div>
 
             <div className="decided-para">

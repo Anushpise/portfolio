@@ -6,7 +6,7 @@ import './ResearchPage.css';
 const researchData = {
     agriculture: {
         title: "Agriculture Research",
-        heroImage: "https://images.unsplash.com/photo-1625246333195-098e98e579ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        heroImage: "https://img.freepik.com/premium-photo/microgridenabled-agricultural-research-background_987764-180127.jpg",
         description: "Exploring innovative solutions in smart farming, IoT-based monitoring, and sustainable agricultural practices. Our research focuses on enhancing crop yield, optimizing resource usage, and integrating modern technology with traditional farming methods.",
         gallery: [
             "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
@@ -19,9 +19,9 @@ const researchData = {
         heroImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         description: "Advancing medical technology through AI-driven diagnostics, patient data analysis, and telemedicine solutions. We aim to bridge the gap between technology and patient care.",
         gallery: [
-            "https://images.unsplash.com/photo-1579684385180-1eacd8859268?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            "https://tse3.mm.bing.net/th/id/OIP.IcqJ17W0BIKPZv4bMVsk3QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
             "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-            "https://images.unsplash.com/photo-1516549655169-df83a0050c2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            "https://cdn.expresshealthcare.in/wp-content/uploads/2020/03/05102127/COVER.jpg"
         ]
     },
     cse: {
@@ -41,7 +41,7 @@ const researchData = {
         gallery: [
             "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
             "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-            "https://images.unsplash.com/photo-1535378437337-12d40c16324c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            "https://tse2.mm.bing.net/th/id/OIP.O09Yfj0Q5LEusFUku3tOyQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
         ]
     },
     social: {

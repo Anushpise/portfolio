@@ -1,11 +1,11 @@
 import React from 'react';
 import './SocialConnections.css';
-
+import lila from '../img/lila.png';
 const SocialConnections = () => {
     return (
         <section className="social-section">
             <div className="social-badge">
-                Lila Poonawalla Foundation<br />Established 1995
+                <img src={lila} alt="" />
             </div>
 
             <h2 className="social-title">A Decade of Meaningful Social Connections</h2>

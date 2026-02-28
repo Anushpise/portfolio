@@ -15,6 +15,9 @@ import ExploreMore from './components/ExploreMore';
 import Loader from './components/Loader';
 import ResearchPage from './components/ResearchPage';
 import GenericPage from './components/GenericPage';
+import AVMPProjects from './components/AVMPProjects';
+import ExperiencePage from './components/ExperiencePage';
+import MediaGallery from './components/MediaGallery';
 
 // Main Homepage Component
 const Home = () => (
@@ -67,6 +70,13 @@ function App() {
           <Route path="/publications/:id" element={<GenericPage />} />
           <Route path="/services/:id" element={<GenericPage />} />
           <Route path="/certifications" element={<GenericPage />} />
+          <Route path="/nptel" element={<GenericPage />} />
+          <Route path="/fdp" element={<GenericPage />} />
+          <Route path="/gallery" element={<MediaGallery />} />
+          <Route path="/avmp-projects" element={<AVMPProjects />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/other-courses" element={<GenericPage />} />
+          <Route path="/presentation" element={<GenericPage />} />
         </Routes>
       </Layout>
     </Router>

@@ -5,11 +5,12 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    padding-top: 120px;
 }
 
 .profile-left {
     flex: 1;
-    padding: 5rem 5%;
+    padding: 2rem 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,10 +72,48 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: 25vw;
+    max-width: 400px;
+    max-height: 400px;
     background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') no-repeat center;
     clip-path: polygon(0 20%, 80% 100%, 0% 100%);
     z-index: 1;
     opacity: 0.5;
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-left {
+        padding: 2rem 5%;
+    }
+
+    .profile-right {
+        width: 100%;
+        clip-path: none;
+        background: none;
+        margin-top: 2rem;
+    }
+
+    .profile-image-container {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-socials {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

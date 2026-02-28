@@ -22,7 +22,7 @@ const UpcomingProjects = () => {
 
     return (
         <section className="upcoming-section">
-            <div style={{ background: 'white', width: '400px', textAlign: 'center', padding: '0.5rem', marginBottom: '2rem', clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0% 100%)' }}>
+            <div className="section-header">
                 <h2 style={{ color: 'black', margin: 0 }}>What are We Working on Next?</h2>
             </div>
 

@@ -1,39 +1,50 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaLeaf, FaMicroscope, FaPenNib, FaShieldAlt, FaUsers, FaPalette, FaChalkboardTeacher, FaProjectDiagram, FaInfoCircle, FaHandsHelping, FaLaptopCode, FaVideo, FaBullhorn, FaObjectGroup } from 'react-icons/fa';
 import './WorkingSector.css';
 
 const WorkingSector = () => {
     const items = [
-        { id: 1, text: "Agriculture Research" },
-        { id: 2, text: "Research & Analysis" },
-        { id: 3, text: "Content Writing (Tech, UPSC, GK, Moral Story)" },
-        { id: 4, text: "24/7 Turnitin Support" },
-        { id: 5, text: "STEM Classes" },
-        { id: 6, text: "Workshops" },
-        { id: 7, text: "Graphics" },
-        { id: 8, text: "Seminars" },
-        { id: 9, text: "Projects" },
-        { id: 10, text: "Consultation" },
-        { id: 11, text: "Counselling" },
-        { id: 12, text: "Online/Onsite Trainings" },
-        { id: 13, text: "Webinars" },
-        { id: 14, text: "Omnichannel Marketing" },
-        { id: 15, text: "UI/UX designing" }
+        { id: 1, text: "Agriculture Research", icon: <FaLeaf />, link: "/research/agriculture" },
+        { id: 2, text: "Research & Analysis", icon: <FaMicroscope />, link: "/research/healthcare" },
+        { id: 3, text: "Content Writing", icon: <FaPenNib />, link: "/services/editorial" },
+        { id: 4, text: "Turnitin Support", icon: <FaShieldAlt />, link: "/services/tech-services" },
+        { id: 5, text: "STEM Classes", icon: <FaChalkboardTeacher />, link: "/services/browse-courses" },
+        { id: 6, text: "Workshops", icon: <FaUsers />, link: "/services/skill-training" },
+        { id: 7, text: "Graphics", icon: <FaPalette />, link: "/services/lead-articles" },
+        { id: 8, text: "Seminars", icon: <FaChalkboardTeacher />, link: "/publications/seminar" },
+        { id: 9, text: "Projects", icon: <FaProjectDiagram />, link: "/projects" },
+        { id: 10, text: "Consultation", icon: <FaInfoCircle />, link: "/services/advisory" },
+        { id: 11, text: "Counselling", icon: <FaHandsHelping />, link: "/services/advisory" },
+        { id: 12, text: "Online Trainings", icon: <FaLaptopCode />, link: "/services/skill-training" },
+        { id: 13, text: "Webinars", icon: <FaVideo />, link: "/services/browse-courses" },
+        { id: 14, text: "Omnichannel Marketing", icon: <FaBullhorn />, link: "/services/tech-services" },
+        { id: 15, text: "UI/UX designing", icon: <FaObjectGroup />, link: "/services/tech-services" }
     ];
 
     return (
         <section className="working-section">
-            <h2 className="working-title">Working Sector</h2>
+            <div className="section-header">
+                <h2 style={{ color: 'black', margin: 0 }}>Working Sector</h2>
+            </div>
 
             <div className="working-table">
-                <div className="working-header">
-                    <div style={{ gridColumn: 2, textAlign: 'center', background: '#dcd0ff', padding: '1rem', color: 'black', fontWeight: 'bold' }}>Working Sector</div>
+                <div className="working-header-row">
+                    Our Services
                 </div>
 
                 {items.map((item) => (
-                    <div key={item.id} className="working-cell">
-                        <span className="cell-number" style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>{item.id}.</span>
-                        {item.text}
-                    </div>
+                    <Link key={item.id} to={item.link} className="working-cell" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                            <div className="icon-container">
+                                {item.icon}
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', justifyContent: 'center' }}>
+                                <span style={{ fontWeight: 'bold' }}>{item.id}.</span>
+                                <span style={{ fontSize: '0.9rem' }}>{item.text}</span>
+                            </div>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </section>

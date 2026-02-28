@@ -38,3 +38,33 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* reusable section header shape */
+.section-header {
+  background: white;
+  width: clamp(250px, 60%, 400px);
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+/* responsive adjustments for fixed shapes */
+@media (max-width: 768px) {
+  .profile-bottom-shape,
+  .aboutme-right-overlay {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ensure no horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure media scales */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}

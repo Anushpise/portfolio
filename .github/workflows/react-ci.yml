@@ -27,6 +27,8 @@ jobs:
 
       - name: Build React App
         run: npm run build
+        env:
+          CI: false
 
       - name: Deploy to Jio Hosting via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

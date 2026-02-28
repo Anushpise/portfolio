@@ -30,11 +30,13 @@ jobs:
         env:
           CI: false
 
-      - name: Deploy to Jio Hosting via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy to Jio Hosting via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./build/
-          server-dir: /public_html/anjalipisecounsel.in/
+          port: 22
+          source: "build/*"
+          target: "public_html/anjalipisecounsel.in/"
+          strip_components: 1

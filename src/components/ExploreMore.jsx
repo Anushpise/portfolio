@@ -34,7 +34,7 @@ const ExploreMore = () => {
                     <h3>Stay Connected With Us</h3>
                     <form
                         className="contact-form"
-                        action="https://formspree.io/f/anshupise95@gmail.com"
+                        action="https://formspree.io/f/maqdzolo"
                         method="POST"
                     >
                         <input type="text" name="name" placeholder="Your Name" required />
@@ -56,8 +56,8 @@ const ExploreMore = () => {
             </div>
 
             <div className="footer-bottom">
-                This website has been professionally designed and developed by Anjali Pise, with full content ownership and 
-credit acknowledged to the client.
+                This website has been professionally designed and developed by Anjali Pise, with full content ownership and
+                credit acknowledged to the client.
             </div>
         </section>
     );

@@ -28,6 +28,39 @@ import dscReal16 from '../img/DSC_0323.jpg';
 import dscReal17 from '../img/DSC_0751.jpg';
 import dscReal18 from '../img/DSC_0782.jpg';
 import dscReal19 from '../img/DSC_0785.jpg';
+import g1 from '../img/g1.jpeg';
+import g2 from '../img/g2.jpeg';
+import g3 from '../img/g3.jpeg';
+import g4 from '../img/g4.jpeg';
+import g5 from '../img/g5.jpeg';
+import g6 from '../img/g6.jpeg';
+import g7 from '../img/g7.jpeg';
+import g8 from '../img/g8.jpeg';
+import g9 from '../img/g9.jpeg';
+import g10 from '../img/g10.jpeg';
+import g11 from '../img/g11.jpeg';
+import g12 from '../img/g12.jpeg';
+import g13 from '../img/g13.jpeg';
+import g14 from '../img/g14.jpeg';
+import g15 from '../img/g15.jpeg';
+import g16 from '../img/g16.jpeg';
+import g17 from '../img/g17.jpeg';
+import g18 from '../img/g18.jpeg';
+import g19 from '../img/g19.jpeg';
+import g20 from '../img/g20.jpeg';
+import g21 from '../img/g21.jpeg';
+import g22 from '../img/g22.jpeg';
+import g23 from '../img/g23.jpeg';
+import g24 from '../img/g24.jpeg';
+import g25 from '../img/g25.jpeg';
+import g26 from '../img/g26.jpeg';
+import g27 from '../img/g27.jpeg';
+import g28 from '../img/g28.jpeg';
+import g29 from '../img/g29.jpeg';
+import g30 from '../img/g30.jpeg';
+import g31 from '../img/g31.jpeg';
+import g32 from '../img/g32.jpeg';
+
 
 const galleryImages = [
     { src: dsc1, title: "Achievement 1" },
@@ -55,6 +88,38 @@ const galleryImages = [
     { src: dscReal17, title: "Event Highlight" },
     { src: dscReal18, title: "Event Highlight" },
     { src: dscReal19, title: "Event Highlight" },
+    { src: g1, title: "Event Highlight" },
+    { src: g2, title: "Event Highlight" },
+    { src: g3, title: "Event Highlight" },
+    { src: g4, title: "Event Highlight" },
+    { src: g5, title: "Event Highlight" },
+    { src: g6, title: "Event Highlight" },
+    { src: g7, title: "Event Highlight" },
+    { src: g8, title: "Event Highlight" },
+    { src: g9, title: "Event Highlight" },
+    { src: g10, title: "Event Highlight" },
+    { src: g11, title: "Event Highlight" },
+    { src: g12, title: "Event Highlight" },
+    { src: g13, title: "Event Highlight" },
+    { src: g14, title: "Event Highlight" },
+    { src: g15, title: "Event Highlight" },
+    { src: g16, title: "Event Highlight" },
+    { src: g17, title: "Event Highlight" },
+    { src: g18, title: "Event Highlight" },
+    { src: g19, title: "Event Highlight" },
+    { src: g20, title: "Event Highlight" },
+    { src: g21, title: "Event Highlight" },
+    { src: g22, title: "Event Highlight" },
+    { src: g23, title: "Event Highlight" },
+    { src: g24, title: "Event Highlight" },
+    { src: g25, title: "Event Highlight" },
+    { src: g26, title: "Event Highlight" },
+    { src: g27, title: "Event Highlight" },
+    { src: g28, title: "Event Highlight" },
+    { src: g29, title: "Event Highlight" },
+    { src: g30, title: "Event Highlight" },
+    { src: g31, title: "Event Highlight" },
+    { src: g32, title: "Event Highlight" },
 ];
 
 const IMAGES_PER_PAGE = 8;

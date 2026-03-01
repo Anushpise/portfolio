@@ -8,7 +8,7 @@ const ExploreMore = () => {
         <section className="explore-section">
             <h2 className="explore-title">Explore More</h2>
 
-            <button className="download-cv-btn" onClick={() => window.open(cvPdf, '_blank')}>Download CV</button>
+            {/* <button className="download-cv-btn" onClick={() => window.open(cvPdf, '_blank')}>Download CV</button> */}
 
             <div className="stats-container">
                 <div className="stat-item">
@@ -56,8 +56,7 @@ const ExploreMore = () => {
             </div>
 
             <div className="footer-bottom">
-                This website has been professionally designed and developed by Anjali Pise, with full content ownership and
-                credit acknowledged to the client.
+                2025-26|Architected by Ms. Anjali Pise. Copyright   |All Rights Reserved by ©AVMPGLOBAL .com
             </div>
         </section>
     );

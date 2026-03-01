@@ -6,6 +6,8 @@ import project2 from '../img/project2.png';
 import project3 from '../img/project3.png';
 import project4 from '../img/project4.png';
 import project5 from '../img/project5.png';
+import project6 from '../img/project6.jpeg';
+import project7 from '../img/project7.png';
 
 
 const projectsData = [
@@ -38,7 +40,20 @@ const projectsData = [
         name: "LMS",
         image: project5,
         info: "The Learning Management System (LMS) is a web-based project designed to streamline and enhance the digital learning experience for students and educators. Developed using modern web technologies, the platform enables course management, content delivery, assignment submissions, and progress tracking within a centralized system. Its primary objective is to simplify academic administration, improve accessibility to learning resources, and support structured online education. The implementation of this system results in better organization, efficient communication, and an improved overall learning experience for both individuals and institutions."
+    },
+    {
+        id: 6,
+        name: "News Recommendation System",
+        image: project6,
+        info: "Our platform utilizes blockchain technology to store user preferences in a decentralized, encrypted ledger, ensuring absolute data privacy and ownership. Smart contracts automatically execute recommendation algorithms based on transparent, pre-defined rules, eliminating central authority manipulation. This system guarantees that news rankings are immutable and tamper-proof, fostering trust through verifiable content provenance. Users are empowered to curate their own feeds and earn tokens for high-quality engagement, creating a meritocratic and secure content ecosystem."
+    },
+    {
+        id: 7,
+        name: "News Recommendation System",
+        image: project7,
+        info: "Smart Village Control System :Guided by the Saansad Adarsh Gram Yojana (SAGY) initiative, this project implements a centralized digital control system to transform Dahegav into a model self-reliant village. It directly overcomes local infrastructure challenges by integrating real-time IoT monitoring for automated water distribution, smart street lighting, and efficient waste management. By digitizing administrative workflows, the system ensures transparent governance and data-driven resource allocation as envisioned by the Prime Minister's rural development goals. This tech-enabled framework serves as a scalable blueprint for holistic social and economic empowerment across rural India. platform utilizes blockchain technology to store user preferences in a decentralized, encrypted ledger, ensuring absolute data privacy and ownership. Smart contracts automatically execute recommendation algorithms based on transparent, pre-defined rules, eliminating central authority manipulation. This system guarantees that news rankings are immutable and tamper-proof, fostering trust through verifiable content provenance. Users are empowered to curate their own feeds and earn tokens for high-quality engagement, creating a meritocratic and secure content ecosystem."
     }
+
 ];
 
 const ProjectCard = ({ project }) => {

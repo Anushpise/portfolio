@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ResearchPage.css';
+import agr1 from '../img/agr1.jpeg';
+import agr2 from '../img/agr2.jpeg';
+import agr3 from '../img/agr3.jpeg';
+import agr4 from '../img/agr4.jpeg';
+import agr5 from '../img/agr5.jpeg';
+import agr6 from '../img/agr6.jpeg';
 
 // Dummy Data Database
 const researchData = {
@@ -9,9 +15,7 @@ const researchData = {
         heroImage: "https://img.freepik.com/premium-photo/microgridenabled-agricultural-research-background_987764-180127.jpg",
         description: "Exploring innovative solutions in smart farming, IoT-based monitoring, and sustainable agricultural practices. Our research focuses on enhancing crop yield, optimizing resource usage, and integrating modern technology with traditional farming methods.",
         gallery: [
-            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-            "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-            "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            agr1, agr2, agr3, agr4, agr5, agr6
         ]
     },
     healthcare: {

@@ -25,7 +25,7 @@ const Header = () => {
                 //         { title: "ADCNMH (Pursuing)", link: "#adcnmh" }
                 //     ]
                 // },
-                { title: "CV", link: cvPdf, target: "_blank" },
+                // { title: "CV", link: cvPdf, target: "_blank" },
                 { title: "Work Experience", link: "/experience" },
                 { title: "--- Academics Subcontent ---", link: "#", isHeader: true },
                 {
@@ -58,6 +58,7 @@ const Header = () => {
                 },
                 { title: "NPTEL/Mooc", link: "/nptel" },
                 { title: "FDP's", link: "/fdp" },
+                { title: "STTP's", link: "/sttp" },
                 { title: "Other Courses", link: "/other-courses" },
                 { title: "Presentation", link: "/presentation" },
                 { title: "Certifications", link: "/certifications" }

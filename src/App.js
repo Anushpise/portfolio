@@ -72,6 +72,7 @@ function App() {
           <Route path="/certifications" element={<GenericPage />} />
           <Route path="/nptel" element={<GenericPage />} />
           <Route path="/fdp" element={<GenericPage />} />
+          <Route path="/sttp" element={<GenericPage />} />
           <Route path="/gallery" element={<MediaGallery />} />
           <Route path="/avmp-projects" element={<AVMPProjects />} />
           <Route path="/experience" element={<ExperiencePage />} />

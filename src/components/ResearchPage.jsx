@@ -8,7 +8,8 @@ import agr4 from '../img/agr4.jpeg';
 import agr5 from '../img/agr5.jpeg';
 import agr6 from '../img/agr6.jpeg';
 import agr7 from '../img/agr7.jpeg';
-import agriVedio from '../vedio/agrive.mp4';
+
+const agriVedio = require('../vedio/agrive.mp4').default || require('../vedio/agrive.mp4');
 
 // Dummy Data Database
 const researchData = {
@@ -17,7 +18,14 @@ const researchData = {
         heroImage: "https://img.freepik.com/premium-photo/microgridenabled-agricultural-research-background_987764-180127.jpg",
         description: "Exploring innovative solutions in smart farming, IoT-based monitoring, and sustainable agricultural practices. Our research focuses on enhancing crop yield, optimizing resource usage, and integrating modern technology with traditional farming methods.",
         gallery: [
-            { type: 'video', url: agriVedio }, agr1, agr2, agr3, agr4, agr5, agr6,agr7
+            { type: 'video', url: agriVedio },
+            { type: 'image', url: agr1 },
+            { type: 'image', url: agr2 },
+            { type: 'image', url: agr3 },
+            { type: 'image', url: agr4 },
+            { type: 'image', url: agr5 },
+            { type: 'image', url: agr6 },
+            { type: 'image', url: agr7 }
         ]
     },
     healthcare: {
@@ -90,17 +98,25 @@ const ResearchPage = () => {
                 <div className="research-gallery">
                     {data.gallery.map((item, idx) => {
                         const isVideo = item && item.type === 'video';
+                        if (isVideo) {
+                            console.log('Video source:', item.url);
+                        }
                         return (
                             <div key={idx} className="research-img-card">
                                 {isVideo ? (
                                     <video
                                         src={item.url}
                                         controls
+                                        controlsList="nodownload"
                                         playsInline
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
+                                        preload="metadata"
+                                        onError={(e) => console.error('Video error:', e.target.error)}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', backgroundColor: '#000' }}
+                                    >
+                                        Your browser does not support the video tag.
+                                    </video>
                                 ) : (
-                                    <img src={item} alt={`${data.title} ${idx + 1}`} />
+                                    <img src={item.url || item} alt={`${data.title} ${idx + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 )}
                             </div>
                         );

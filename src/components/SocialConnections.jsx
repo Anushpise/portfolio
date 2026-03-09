@@ -30,7 +30,7 @@ const SocialConnections = () => {
 
             <div className="social-footer">
                 <h3>10+ Years of Social Connection</h3>
-                <p>"Sustained Social Connection Participation Spanning More than Decade"</p>
+                <p >"Sustained Social Connection Participation Spanning More than Decade"</p>
                 <p>LG2K17 Award and Scholarship Nominee</p>
             </div>
         </section>

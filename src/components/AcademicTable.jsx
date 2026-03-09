@@ -6,20 +6,20 @@ import './AcademicTable.css';
 const AcademicTable = () => {
     const items = [
         { id: 1, text: "International Conference", icon: <FaGlobe />, link: "/publications/intl-conf" },
-        { id: 2, text: "National Conference", icon: <FaFlag />, link: "/publications/conf" },
+        { id: 2, text: "National Conference/Startup", icon: <FaFlag />, link: "/publications/conf" },
         { id: 3, text: "Scopus", icon: <FaMicroscope />, link: "/publications/scopus" },
         { id: 4, text: "Journal/UGC", icon: <FaBookOpen />, link: "/publications/journal" },
         { id: 5, text: "Patent", icon: <FaLightbulb />, link: "/publications/patent" },
         { id: 6, text: "Book Chapter", icon: <FaBook />, link: "/publications/book-chapter" },
-        { id: 7, text: "Book Translator", icon: <FaLanguage />, link: "/publications/book-author" },
+        { id: 7, text: "Book Author/Translator", icon: <FaLanguage />, link: "/publications/book-author" },
         { id: 8, text: "Copyright", icon: <FaCopyright />, link: "/publications/copyright" },
         { id: 9, text: "FDP", icon: <FaChalkboardTeacher />, link: "/fdp" },
         { id: 10, text: "STTP", icon: <FaCertificate />, link: "/sttp" },
         { id: 11, text: "Workshops", icon: <FaUsers />, link: "/publications/seminar" },
-        { id: 12, text: "Intl. Seminar", icon: <FaUserGraduate />, link: "/publications/seminar" },
-        { id: 13, text: "Intl. Webinar", icon: <FaBroadcastTower />, link: "#" },
-        { id: 14, text: "Nptel", icon: <FaUniversity />, link: "#" },
-        { id: 15, text: "EDU-Corporate Relations", icon: <FaHandshake />, link: "#" }
+        { id: 12, text: "Colloquium", icon: <FaUserGraduate />, link: "/publications/seminar" },
+        { id: 13, text: "Intl. Webinar", icon: <FaBroadcastTower />, link: "/publications/seminar" },
+        { id: 14, text: "Nptel", icon: <FaUniversity />, link: "/nptel" },
+        { id: 15, text: "EDU-Corporate Relations", icon: <FaHandshake />, link: "/services/advisory" }
     ];
 
     return (

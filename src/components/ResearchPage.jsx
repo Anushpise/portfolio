@@ -7,6 +7,8 @@ import agr3 from '../img/agr3.jpeg';
 import agr4 from '../img/agr4.jpeg';
 import agr5 from '../img/agr5.jpeg';
 import agr6 from '../img/agr6.jpeg';
+import agr7 from '../img/agr7.jpeg';
+import agriVedio from '../vedio/agrive.mp4';
 
 // Dummy Data Database
 const researchData = {
@@ -15,11 +17,11 @@ const researchData = {
         heroImage: "https://img.freepik.com/premium-photo/microgridenabled-agricultural-research-background_987764-180127.jpg",
         description: "Exploring innovative solutions in smart farming, IoT-based monitoring, and sustainable agricultural practices. Our research focuses on enhancing crop yield, optimizing resource usage, and integrating modern technology with traditional farming methods.",
         gallery: [
-            agr1, agr2, agr3, agr4, agr5, agr6
+            { type: 'video', url: agriVedio }, agr1, agr2, agr3, agr4, agr5, agr6,agr7
         ]
     },
     healthcare: {
-        title: "Healthcare Research",
+        title: "Research",
         heroImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         description: "Advancing medical technology through AI-driven diagnostics, patient data analysis, and telemedicine solutions. We aim to bridge the gap between technology and patient care.",
         gallery: [
@@ -53,7 +55,7 @@ const researchData = {
         heroImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         description: "Commitment to social impact through community engagement, education, and empowerment initiatives. We believe in technology for the greater good.",
         gallery: [
-            "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            
             "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
             "https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
         ]
@@ -86,11 +88,23 @@ const ResearchPage = () => {
                 </div>
 
                 <div className="research-gallery">
-                    {data.gallery.map((img, idx) => (
-                        <div key={idx} className="research-img-card">
-                            <img src={img} alt={`${data.title} ${idx + 1}`} />
-                        </div>
-                    ))}
+                    {data.gallery.map((item, idx) => {
+                        const isVideo = item && item.type === 'video';
+                        return (
+                            <div key={idx} className="research-img-card">
+                                {isVideo ? (
+                                    <video
+                                        src={item.url}
+                                        controls
+                                        playsInline
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                ) : (
+                                    <img src={item} alt={`${data.title} ${idx + 1}`} />
+                                )}
+                            </div>
+                        );
+                    })}
                     {data.gallery.length === 0 && <p>Gallery images coming soon...</p>}
                 </div>
             </div>

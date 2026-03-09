@@ -1,16 +1,33 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { motion } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../img/logo.png.png";
 import cvPdf from "../pdf/Anjali_Pise_Resume.pdf";
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleAboutMe = (e) => {
+        e.preventDefault();
+        if (location.pathname !== "/") {
+            navigate("/");
+            setTimeout(() => {
+                const element = document.getElementById("about");
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+            }, 500);
+        } else {
+            const element = document.getElementById("about");
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     // Navigation Data Structure
     const navItems = [
         { title: "Home", link: "/" },
-        { title: "About Me", link: "/#about" },
+        { title: "About Me" },
         {
             title: "Academics",
             link: "#academics",
@@ -60,7 +77,7 @@ const Header = () => {
                 { title: "FDP's", link: "/fdp" },
                 { title: "STTP's", link: "/sttp" },
                 { title: "Other Courses", link: "/other-courses" },
-                { title: "Presentation", link: "/presentation" },
+                { title: "Presentation/Webinars", link: "/presentation" },
                 { title: "Certifications", link: "/certifications" }
             ]
         },
@@ -115,7 +132,11 @@ const Header = () => {
             <nav className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
                 {navItems.map((item, index) => (
                     <div key={index} className="nav-item">
-                        <a href={item.link} className="nav-link">{item.title}</a>
+                        {item.title === "About Me" ? (
+                            <a onClick={handleAboutMe} href="#" className="nav-link">{item.title}</a>
+                        ) : (
+                            <a href={item.link} className="nav-link">{item.title}</a>
+                        )}
 
                         {item.dropdown && (
                             <div className="dropdown-menu">

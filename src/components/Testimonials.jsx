@@ -12,7 +12,7 @@ const Testimonials = () => {
             id: 1,
             quote: "Your determination and helpful attitude during our Mega Project truly define your great personality and professional drive. Your ability to organize engaging team events and embrace new challenges has been a vital part of my learning journey-thank you for being an inspiring colleague and friend.",
             author: "Mr. Amol Kurkute",
-            role: "Working @Infosys",
+            role: "Data Analyst@Infosys ",
             image: test1
         },
         {
@@ -33,7 +33,7 @@ const Testimonials = () => {
             id: 4,
             quote: "your pedagogy was exceptional, seamlessly blending an engaging instructional style with the patience required for individual student mastery. Your contagious enthusiasm for the subject, combined with a willingness to provide tailored guidance, consistently transformed complex material into intuitive learning experiences. Any future student would be fortunate to experience your mentorship; your commitment to academic excellence is truly inspiring.",
             author: "Gunshree Mujewar",
-            role: " @ DMIHER As a lecturer",
+            role: "OTT@ DMIHER",
             image: test4
         },
         {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Profile.css';
-import { FaLinkedin, FaGithub, FaTwitter, FaWhatsapp, FaGlobe ,FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter, FaWhatsapp, FaGlobe, FaInstagram } from 'react-icons/fa';
 import { SiGooglescholar, SiResearchgate, SiOrcid } from 'react-icons/si';
 
 import profileImage from '../img/profile.png';
@@ -15,7 +15,7 @@ const Profile = () => {
                 <h1 className="profile-name">Ms. Anjali V.Pise</h1>
 
                 <div className="profile-details">
-                    <p><strong>Education:</strong> DCE, BE(CSE), MTech(CSE), ADMNCH</p>
+                    <p><strong>Education:</strong> DCO, BE(CSE), MTech(CSE), ADCNMH</p>
                     <p><strong>Mail Id:</strong> anjalipise@avmpglobal.com</p>
                     <p><strong>Contact No:</strong> +91-7083050233</p>
                     {/* <p><strong>Rapid Response Time:</strong> +GMT</p> */}
